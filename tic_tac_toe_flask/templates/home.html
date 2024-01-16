@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{url_for('static', filename='tic.css')}}">
+    </head>
+    <main class="background">
+        <section class="title">
+            <h1>Tic Tac Toe</h1>
+        </section>
+        <section class="display">
+            Player <span class="display-player" style="color: {{button_color}}">{{current_player}}</span>'s turn
+        </section>
+        <form action="/make_move" method="post">
+            <section class="container">
+                <button name="position" class="tile" value="0-0" style="color: {{button_color}} ">{{board[0][0]}}</button>
+                <button name="position" class="tile" value="0-1" style="color: {{button_color}} ">{{board[0][1]}}</button>
+                <button name="position" class="tile" value="0-2" style="color: {{button_color}} ">{{board[0][2]}}</button>
+                <button name="position" class="tile" value="1-0" style="color: {{button_color}} ">{{board[1][0]}}</button>
+                <button name="position" class="tile" value="1-1" style="color: {{button_color}} ">{{board[1][1]}}</button>
+                <button name="position" class="tile" value="1-2" style="color: {{button_color}} ">{{board[1][2]}}</button>
+                <button name="position" class="tile" value="2-0" style="color: {{button_color}} ">{{board[2][0]}}</button>
+                <button name="position" class="tile" value="2-1" style="color: {{button_color}} ">{{board[2][1]}}</button>
+                <button name="position" class="tile" value="2-2" style="color: {{button_color}} ">{{board[2][2]}}</button>
+            </section>
+        </form>
+        <section class="controls">
+            <form method="post" action="/reset">
+            <button type="submit" id="reset">Reset</button>
+            </form>
+        </section>
+    </main>
+{% endblock %}

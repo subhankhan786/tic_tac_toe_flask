@@ -1,0 +1,53 @@
+/* CSS for header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #303030; /* Darker background color */
+  padding: 20px;
+}
+
+.header .logo {
+  font-size: 25px;
+  font-family: 'Sriracha', cursive;
+  color: #f5f5f5; /* Updated font color to match the container */
+  text-decoration: none;
+  margin-left: 10px; /* Adjusted margin for smaller screens */
+  letter-spacing: 1px; /* Added letter-spacing for aesthetics */
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #303030; /* Darker background color */
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: #f5f5f5; /* Updated font color to match the container */
+  padding: 10px; /* Adjusted padding for smaller screens */
+  transition: color 0.3s ease; /* Added subtle color transition */
+  font-size: 14px; /* Adjusted font size for smaller screens */
+  letter-spacing: 1px; /* Added letter-spacing for aesthetics */
+}
+
+.nav-items a:hover {
+  color: #5edaf0; /* Hover color */
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-items {
+    margin-top: 10px;
+  }
+
+  .nav-items a {
+    padding: 10px 15px;
+  }
+}

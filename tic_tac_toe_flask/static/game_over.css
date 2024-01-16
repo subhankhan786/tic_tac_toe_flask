@@ -1,0 +1,14 @@
+.body{
+    background-color: #12181B;
+}
+.h1 {
+    text-align: center;
+    color: #bfe0ea;
+}
+.container {
+    text-align: center;
+    padding-top: 9%;
+}
+button{
+    padding: 6%;
+}
